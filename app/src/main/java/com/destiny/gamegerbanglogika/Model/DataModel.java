@@ -1,7 +1,7 @@
 package com.destiny.gamegerbanglogika.Model;
 
 public class DataModel {
-    String no,gambar,gambar2,jawaban1,jawaban2,jawaban3,jawaban;
+    String no,gambar,gambar2,jawaban1,jawaban2,jawaban3,jawaban,table;
 
     public String getNo() {
         return no;
@@ -57,5 +57,13 @@ public class DataModel {
 
     public void setJawaban(String jawaban) {
         this.jawaban = jawaban;
+    }
+
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
     }
 }

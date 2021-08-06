@@ -26,9 +26,9 @@
 
     <string-array name="dificulty">
         <item>Kesulitan</item>
-        <item>Easy</item>
-        <item>Normal</item>
-        <item>Hard</item>
+        <item>Mudah</item>
+        <item>Sedang</item>
+        <item>Sulit</item>
     </string-array>
 
     <string-array name="kategorikal">

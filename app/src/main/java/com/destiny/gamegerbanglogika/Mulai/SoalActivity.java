@@ -1,6 +1,7 @@
 package com.destiny.gamegerbanglogika.Mulai;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,6 +11,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.destiny.gamegerbanglogika.Model.DataModel;
@@ -64,11 +66,14 @@ import com.destiny.gamegerbanglogika.R;
 import java.util.ArrayList;
 
 public class SoalActivity extends AppCompatActivity {
-    Button Jawaban1,Jawaban2,Jawaban3,Submit;
+    Button Jawaban1,Jawaban2,Jawaban3,Submit,Lanjut;
     ImageView Gambar;
     private ArrayList<DataModel> pList = new ArrayList<>();
     String Jawaban = "0";
     String Kategori,Random;
+    ImageView Table;
+    CardView cardTable;
+    TextView Jaw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +89,10 @@ public class SoalActivity extends AppCompatActivity {
         Jawaban3 = findViewById(R.id.btnJawaban3);
         Submit = findViewById(R.id.btnSubmit);
         Gambar = findViewById(R.id.ivGambar);
+        Lanjut = findViewById(R.id.btnNext);
+        Table = findViewById(R.id.ivTable);
+        Jaw = findViewById(R.id.tvJawaban);
+        cardTable = findViewById(R.id.cardTable);
         if (Kategori.equals("Easy")){
             if (Random.equals("1")){
                 pList.addAll(EasyModel1.getListData());
@@ -196,7 +205,12 @@ public class SoalActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("No : "+pList.get(no).getNo());
         Jawaban1.setText(pList.get(no).getJawaban1());
         Jawaban2.setText(pList.get(no).getJawaban2());
-        Jawaban3.setText(pList.get(no).getJawaban3());
+        if (pList.get(no).getJawaban3().equals("") || pList.get(0).getJawaban3().isEmpty()){
+            Jawaban3.setVisibility(View.GONE);
+        }else{
+            Jawaban3.setText(pList.get(no).getJawaban3());
+        }
+
         Gambar.setImageResource(Integer.parseInt(pList.get(no).getGambar()));
         final Handler handler = new Handler();
         Jawaban1.setOnClickListener(new View.OnClickListener() {
@@ -220,11 +234,16 @@ public class SoalActivity extends AppCompatActivity {
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Submit.setEnabled(false);
                 if (Jawaban.equals(pList.get(no).getJawaban())){
                     Gambar.setImageResource(Integer.parseInt(pList.get(no).getGambar2()));
+                    cardTable.setVisibility(View.VISIBLE);
+                    Table.setImageResource(Integer.parseInt(pList.get(no).getTable()));
+                    Jaw.setText("Jawaban Benar "+Jawaban);
                     Toast.makeText(SoalActivity.this, "Jawaban Benar "+Jawaban, Toast.LENGTH_SHORT).show();
-                    handler.postDelayed(new Runnable() {
-                        public void run() {
+                    Lanjut.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
                             if (no >= pList.size()-1){
                                 Intent goInput = new Intent(SoalActivity.this, ScoreActivity.class);
                                 goInput.putExtra("SCORE",String.valueOf(Integer.parseInt(Score)+10));
@@ -239,27 +258,31 @@ public class SoalActivity extends AppCompatActivity {
                                 startActivities(new Intent[]{goInput});
                             }
                         }
-                    }, 3000); //3000 L
+                    });
                 }else{
                     Toast.makeText(SoalActivity.this, "Jawaban Salah "+Jawaban+" Yang Benar adalah "+pList.get(no).getJawaban(), Toast.LENGTH_SHORT).show();
                     Gambar.setImageResource(Integer.parseInt(pList.get(no).getGambar()));
-                    handler.postDelayed(new Runnable() {
-                        public void run() {
+                    cardTable.setVisibility(View.VISIBLE);
+                    Jaw.setText("Jawaban Benar "+Jawaban);
+                    Table.setImageResource(Integer.parseInt(pList.get(no).getTable()));
+                    Lanjut.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
                             if (no >= pList.size()-1){
                                 Intent goInput = new Intent(SoalActivity.this, ScoreActivity.class);
-                                goInput.putExtra("SCORE",String.valueOf(Integer.parseInt(Score)));
+                                goInput.putExtra("SCORE",String.valueOf(Integer.parseInt(Score)+10));
                                 goInput.putExtra("KATEGORI",Kategori);
                                 startActivity(goInput);
                             }else{
                                 Intent goInput = new Intent(SoalActivity.this, SoalActivity.class);
                                 goInput.putExtra("NO",String.valueOf(no+1));
-                                goInput.putExtra("SCORE",String.valueOf(Integer.parseInt(Score)));
+                                goInput.putExtra("SCORE",String.valueOf(Integer.parseInt(Score)+10));
                                 goInput.putExtra("KATEGORI",Kategori);
                                 goInput.putExtra("RAND",Random);
                                 startActivities(new Intent[]{goInput});
                             }
                         }
-                    }, 3000); //3000 L
+                    });
                 }
             }
         });

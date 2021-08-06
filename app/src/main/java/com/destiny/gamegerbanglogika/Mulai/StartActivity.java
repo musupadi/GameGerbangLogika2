@@ -34,7 +34,7 @@ public class StartActivity extends AppCompatActivity {
         LDificulty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dificulty.getSelectedItem().toString().equals("Easy")){
+                if (dificulty.getSelectedItem().toString().equals("Mudah")){
                     Intent goInput = new Intent(StartActivity.this, SoalActivity.class);
                     goInput.putExtra("NO",String.valueOf(0));
                     goInput.putExtra("SCORE",String.valueOf(0));
@@ -44,7 +44,7 @@ public class StartActivity extends AppCompatActivity {
                     int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                     goInput.putExtra("RAND",String.valueOf(random_int));
                     startActivities(new Intent[]{goInput});
-                }else if (dificulty.getSelectedItem().toString().equals("Normal")){
+                }else if (dificulty.getSelectedItem().toString().equals("Sedang")){
                     Intent goInput = new Intent(StartActivity.this, SoalActivity.class);
                     goInput.putExtra("NO",String.valueOf(0));
                     goInput.putExtra("SCORE",String.valueOf(0));
@@ -54,7 +54,7 @@ public class StartActivity extends AppCompatActivity {
                     int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                     goInput.putExtra("RAND",String.valueOf(random_int));
                     startActivities(new Intent[]{goInput});
-                }else if (dificulty.getSelectedItem().toString().equals("Hard")){
+                }else if (dificulty.getSelectedItem().toString().equals("Sulit")){
                     Intent goInput = new Intent(StartActivity.this, SoalActivity.class);
                     goInput.putExtra("NO",String.valueOf(0));
                     goInput.putExtra("SCORE",String.valueOf(0));

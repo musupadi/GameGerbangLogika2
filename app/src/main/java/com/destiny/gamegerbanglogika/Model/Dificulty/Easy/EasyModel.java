@@ -13,7 +13,8 @@ public class EasyModel {
                     "NAND",
                     "XOR",
                     "AND",
-                    "AND"
+                    "AND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"2",
                     String.valueOf(R.drawable.easy_on_on_mati),
@@ -21,7 +22,8 @@ public class EasyModel {
                     "AND",
                     "XOR",
                     "NOR",
-                    "AND"
+                    "AND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"3",
                     String.valueOf(R.drawable.easy_on_on_mati),
@@ -29,7 +31,8 @@ public class EasyModel {
                     "NAND",
                     "AND",
                     "NOR",
-                    "AND"
+                    "AND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"4",
                     String.valueOf(R.drawable.easy_on_off_mati),
@@ -37,7 +40,8 @@ public class EasyModel {
                     "AND",
                     "XNOR",
                     "OR",
-                    "OR"
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"5",
                     String.valueOf(R.drawable.easy_on_on_mati),
@@ -45,7 +49,8 @@ public class EasyModel {
                     "OR",
                     "XOR",
                     "NOR",
-                    "OR"
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"6",
                     String.valueOf(R.drawable.easy_on_on_mati),
@@ -53,7 +58,8 @@ public class EasyModel {
                     "OR",
                     "XOR",
                     "NAND",
-                    "OR"
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"7",
                     String.valueOf(R.drawable.easy_on_off_mati),
@@ -61,7 +67,8 @@ public class EasyModel {
                     "NAND",
                     "XNOR",
                     "NOR",
-                    "NAND"
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"8",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -69,7 +76,8 @@ public class EasyModel {
                     "OR",
                     "NAND",
                     "XOR",
-                    "NAND"
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"9",
                     String.valueOf(R.drawable.easy_off_on_mati),
@@ -77,7 +85,8 @@ public class EasyModel {
                     "NOR",
                     "AND",
                     "NAND",
-                    "NAND"
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"10",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -85,7 +94,8 @@ public class EasyModel {
                     "NOR",
                     "AND",
                     "XOR",
-                    "NOR"
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"11",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -93,7 +103,8 @@ public class EasyModel {
                     "OR",
                     "NOR",
                     "XOR",
-                    "NOR"
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"12",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -101,7 +112,8 @@ public class EasyModel {
                     "OR",
                     "AND",
                     "NOR",
-                    "NOR"
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"13",
                     String.valueOf(R.drawable.easy_on_off_mati),
@@ -109,7 +121,8 @@ public class EasyModel {
                     "NOR",
                     "AND",
                     "XOR",
-                    "XOR"
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"14",
                     String.valueOf(R.drawable.easy_off_on_mati),
@@ -117,7 +130,8 @@ public class EasyModel {
                     "NOR",
                     "XOR",
                     "XNOR",
-                    "XOR"
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"15",
                     String.valueOf(R.drawable.easy_off_on_mati),
@@ -125,7 +139,8 @@ public class EasyModel {
                     "XOR",
                     "XNOR",
                     "AND",
-                    "XOR"
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"16",
                     String.valueOf(R.drawable.easy_on_on_mati),
@@ -133,7 +148,8 @@ public class EasyModel {
                     "XOR",
                     "XNOR",
                     "NOR",
-                    "XNOR"
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"17",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -141,7 +157,8 @@ public class EasyModel {
                     "XNOR",
                     "AND",
                     "OR",
-                    "XNOR"
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"18",
                     String.valueOf(R.drawable.easy_off_off_mati),
@@ -149,7 +166,8 @@ public class EasyModel {
                     "OR",
                     "XOR",
                     "XNOR",
-                    "XNOR"
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
             },
     };
     public static ArrayList<DataModel> getListData(){
@@ -164,6 +182,7 @@ public class EasyModel {
             models.setJawaban2(aData[4]);
             models.setJawaban3(aData[5]);
             models.setJawaban(aData[6]);
+            models.setTable(aData[7]);
             list.add(models);
         }
         return list;

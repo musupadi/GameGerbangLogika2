@@ -10,26 +10,29 @@ public class EasyModel5 {
             {"1",
                     String.valueOf(R.drawable.easy_on_on_mati),
                     String.valueOf(R.drawable.easy_on_on_nyala),
+                    "ON",
+                    "OFF",
+                    "",
+                    "ON",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"2",
+                    String.valueOf(R.drawable.easy_on_on_mati),
+                    String.valueOf(R.drawable.easy_on_on_nyala),
                     "AND",
                     "XOR",
                     "NOR",
-                    "AND"
-            },
-            {"2",
-                    String.valueOf(R.drawable.easy_off_off_mati),
-                    String.valueOf(R.drawable.easy_off_off_nyala),
-                    "OR",
-                    "XOR",
-                    "XNOR",
-                    "XNOR"
+                    "AND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"3",
                     String.valueOf(R.drawable.easy_on_on_mati),
                     String.valueOf(R.drawable.easy_on_on_nyala),
-                    "OR",
-                    "XOR",
+                    "NAND",
                     "AND",
-                    "OR"
+                    "NOR",
+                    "AND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"4",
                     String.valueOf(R.drawable.easy_on_off_mati),
@@ -37,57 +40,135 @@ public class EasyModel5 {
                     "AND",
                     "XNOR",
                     "OR",
-                    "OR"
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"5",
+                    String.valueOf(R.drawable.easy_on_on_mati),
+                    String.valueOf(R.drawable.easy_on_on_nyala),
+                    "OR",
+                    "XOR",
+                    "NOR",
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"6",
+                    String.valueOf(R.drawable.easy_on_on_mati),
+                    String.valueOf(R.drawable.easy_on_on_nyala),
+                    "OR",
+                    "XOR",
+                    "NAND",
+                    "OR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"7",
                     String.valueOf(R.drawable.easy_on_off_mati),
                     String.valueOf(R.drawable.easy_on_off_nyala),
                     "NAND",
                     "XNOR",
                     "NOR",
-                    "NAND"
-            },
-            {"6",
-                    String.valueOf(R.drawable.easy_on_on_mati),
-                    String.valueOf(R.drawable.easy_on_on_nyala),
-                    "XOR",
-                    "XNOR",
-                    "NOR",
-                    "XNOR"
-            },
-            {"7",
-                    String.valueOf(R.drawable.easy_on_off_mati),
-                    String.valueOf(R.drawable.easy_on_off_nyala),
-                    "NOR",
-                    "AND",
-                    "XOR",
-                    "XOR"
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"8",
-                    String.valueOf(R.drawable.easy_off_off_mati),
-                    String.valueOf(R.drawable.easy_off_off_nyala),
-                    "NOR",
-                    "AND",
-                    "XOR",
-                    "NOR"
-            },
-            {"9",
                     String.valueOf(R.drawable.easy_off_off_mati),
                     String.valueOf(R.drawable.easy_off_off_nyala),
                     "OR",
                     "NAND",
                     "XOR",
-                    "NAND"
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"9",
+                    String.valueOf(R.drawable.easy_off_on_mati),
+                    String.valueOf(R.drawable.easy_off_on_nyala),
+                    "NOR",
+                    "AND",
+                    "NAND",
+                    "NAND",
+                    String.valueOf(R.drawable.and_e_1)
             },
             {"10",
+                    String.valueOf(R.drawable.easy_off_off_mati),
+                    String.valueOf(R.drawable.easy_off_off_nyala),
+                    "NOR",
+                    "AND",
+                    "XOR",
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"11",
+                    String.valueOf(R.drawable.easy_off_off_mati),
+                    String.valueOf(R.drawable.easy_off_off_nyala),
+                    "OR",
+                    "NOR",
+                    "XOR",
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"12",
+                    String.valueOf(R.drawable.easy_off_off_mati),
+                    String.valueOf(R.drawable.easy_off_off_nyala),
+                    "OR",
+                    "AND",
+                    "NOR",
+                    "NOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"13",
+                    String.valueOf(R.drawable.easy_on_off_mati),
+                    String.valueOf(R.drawable.easy_on_off_nyala),
+                    "NOR",
+                    "AND",
+                    "XOR",
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"14",
+                    String.valueOf(R.drawable.easy_off_on_mati),
+                    String.valueOf(R.drawable.easy_off_on_nyala),
+                    "NOR",
+                    "XOR",
+                    "XNOR",
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"15",
+                    String.valueOf(R.drawable.easy_off_on_mati),
+                    String.valueOf(R.drawable.easy_off_on_nyala),
+                    "XOR",
+                    "XNOR",
+                    "AND",
+                    "XOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"16",
                     String.valueOf(R.drawable.easy_on_on_mati),
                     String.valueOf(R.drawable.easy_on_on_nyala),
-                    "NAND",
                     "XOR",
+                    "XNOR",
+                    "NOR",
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"17",
+                    String.valueOf(R.drawable.easy_off_off_mati),
+                    String.valueOf(R.drawable.easy_off_off_nyala),
+                    "XNOR",
                     "AND",
-                    "AND"
-            }
-
+                    "OR",
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
+            {"18",
+                    String.valueOf(R.drawable.easy_off_off_mati),
+                    String.valueOf(R.drawable.easy_off_off_nyala),
+                    "OR",
+                    "XOR",
+                    "XNOR",
+                    "XNOR",
+                    String.valueOf(R.drawable.and_e_1)
+            },
     };
     public static ArrayList<DataModel> getListData(){
         DataModel models = null;
@@ -101,6 +182,7 @@ public class EasyModel5 {
             models.setJawaban2(aData[4]);
             models.setJawaban3(aData[5]);
             models.setJawaban(aData[6]);
+            models.setTable(aData[7]);
             list.add(models);
         }
         return list;
